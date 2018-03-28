@@ -4,7 +4,7 @@ require 'rubygems'
 require 'hoe'
 
 Hoe.plugin :git
-Hoe.plugin :gemspec
+Hoe.plugin :bundler
 
 Hoe.spec 'hoe-gemspec' do
   developer('Mike Dalessio', 'mike.dalessio@gmail.com')
@@ -14,8 +14,8 @@ Hoe.spec 'hoe-gemspec' do
   self.readme_file      = "README.rdoc"
   self.test_globs       = ["test/test_*.rb"]
 
-  extra_deps     << ["hoe", ">=2.2.0"]
-  extra_dev_deps << ["rake", ">=0"]
+  extra_dev_deps << ["hoe-git", ">=0"]
+  extra_dev_deps << ["hoe-bundler", ">=0"]
 end
 
 # vim: syntax=ruby

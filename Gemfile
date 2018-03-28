@@ -8,6 +8,7 @@ source "https://rubygems.org/"
 gem "minitest", "~>5.11", :group => [:development, :test]
 gem "hoe-git", ">=0", :group => [:development, :test]
 gem "hoe-bundler", ">=0", :group => [:development, :test]
+gem "concourse", "~>0.18", :group => [:development, :test]
 gem "rdoc", ">=4.0", "<6", :group => [:development, :test]
 gem "hoe", "~>3.17", :group => [:development, :test]
 

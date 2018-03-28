@@ -1,2 +1,4 @@
 pkg
 Gemfile.lock
+concourse/private.yml
+concourse/hoe-gemspec.final.yml

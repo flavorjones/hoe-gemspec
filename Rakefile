@@ -14,6 +14,7 @@ Hoe.spec 'hoe-gemspec' do
   self.readme_file      = "README.md"
   self.test_globs       = ["test/test_*.rb"]
 
+  extra_dev_deps << ["minitest", "~> 5.11"]
   extra_dev_deps << ["hoe-git", ">=0"]
   extra_dev_deps << ["hoe-bundler", ">=0"]
 end

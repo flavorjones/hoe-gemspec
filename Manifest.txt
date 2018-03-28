@@ -1,6 +1,8 @@
-CHANGELOG.rdoc
+CHANGELOG.md
+Gemfile
+LICENSE
 Manifest.txt
-README.rdoc
+README.md
 Rakefile
 lib/hoe/gemspec.rb
 test/fixture_project/Gemfile

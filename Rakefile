@@ -8,10 +8,10 @@ Hoe.plugin :bundler
 
 Hoe.spec 'hoe-gemspec' do
   developer('Mike Dalessio', 'mike.dalessio@gmail.com')
+  license "MIT"
 
-  self.extra_rdoc_files = FileList["*.rdoc"]
-  self.history_file     = "CHANGELOG.rdoc"
-  self.readme_file      = "README.rdoc"
+  self.history_file     = "CHANGELOG.md"
+  self.readme_file      = "README.md"
   self.test_globs       = ["test/test_*.rb"]
 
   extra_dev_deps << ["hoe-git", ">=0"]

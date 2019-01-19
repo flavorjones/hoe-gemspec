@@ -17,11 +17,11 @@ Hoe.spec 'hoe-gemspec' do
   extra_dev_deps << ["minitest", "~> 5.11"]
   extra_dev_deps << ["hoe-git", ">=0"]
   extra_dev_deps << ["hoe-bundler", ">=0"]
-  extra_dev_deps << ["concourse", "~> 0.18"]
+  extra_dev_deps << ["concourse", "~> 0.23"]
 end
 
 require "concourse"
 
-Concourse.new("hoe-gemspec").create_tasks!
+Concourse.new("hoe-gemspec", fly_target: "flavorjones").create_tasks!
 
 # vim: syntax=ruby

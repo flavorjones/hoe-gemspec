@@ -1,0 +1,68 @@
+resources:
+  - name: ci
+    type: git
+    source:
+      uri: https://github.com/flavorjones/hoe-gemspec/
+      branch: master
+      disable_ci_skip: true # always get the latest pipeline configuration
+  - name: hoe-gemspec
+    type: git
+    source:
+      uri: https://github.com/flavorjones/hoe-gemspec/
+      branch: master
+      ignore_paths:
+        - concourse/**
+
+jobs:
+  - name: "ruby-2.4"
+    public: true
+    plan:
+      - get: ci
+      - get: hoe-gemspec
+        trigger: true
+      - task: rake-test
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            source: {repository: ruby, tag: "2.4"}
+          inputs:
+            - name: ci
+            - name: hoe-gemspec
+          run:
+            path: ci/concourse/tasks/rake-test/run.sh
+  - name: "ruby-2.5"
+    public: true
+    plan:
+      - get: ci
+      - get: hoe-gemspec
+        trigger: true
+      - task: rake-test
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            source: {repository: ruby, tag: "2.5"}
+          inputs:
+            - name: ci
+            - name: hoe-gemspec
+          run:
+            path: ci/concourse/tasks/rake-test/run.sh
+
+  - name: "jruby-9.1"
+    public: true
+    plan:
+      - get: ci
+      - get: hoe-gemspec
+        trigger: true
+      - task: rake-test
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            source: {repository: jruby, tag: "9.1-jdk"}
+          inputs:
+            - name: ci
+            - name: hoe-gemspec
+          run:
+            path: ci/concourse/tasks/rake-test/run.sh

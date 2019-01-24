@@ -2,7 +2,7 @@
 
 http://github.com/flavorjones/hoe-gemspec
 
-[![Concourse CI](https://ci.nokogiri.org/api/v1/teams/nokogiri-core/pipelines/hoe-gemspec/badge)](https://ci.nokogiri.org/teams/nokogiri-core/pipelines/hoe-gemspec)
+[![Concourse CI](https://ci.nokogiri.org/api/v1/teams/flavorjones/pipelines/hoe-gemspec/badge)](https://ci.nokogiri.org/teams/flavorjones/pipelines/hoe-gemspec)
 
 
 ## Description
